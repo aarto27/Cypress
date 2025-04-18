@@ -85,7 +85,7 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         clickMultipleTimes(".cart-qty-down", 1, 2);
         cy.wait(2000);
-        cy.get(".text-center .btn-remove").eq(0).click();
+        cy.get(".text-center .btn-remove").eq(1).click();
         cy.get(".breadcrumb .fi-rs-home").click();
         cy.wait(2000);
         cy.scrollTo('bottom');
