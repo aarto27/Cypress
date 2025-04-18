@@ -89,6 +89,9 @@ describe('ZetUpStore', () => {
         cy.get(".breadcrumb .fi-rs-home").click();
         cy.wait(2000);
         cy.scrollTo('bottom');
+        cy.wait(2000);
+        cyscrollTo('top');
+        cy.wait(2000);
         cy.reload();
     });
 });
