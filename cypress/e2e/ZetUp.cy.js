@@ -5,6 +5,13 @@ import {
 describe('ZetUpStore', () => {
     it('ZetUpStore', () => {
         cy.visit("https://hometown.zetupstore.com/");
+        cy.wait(2000);
+        cy.scrollTo('bottom');
+        cy.wait(2000);
+        cy.scrollTo('top');
+        cy.wait(2000);
+        cy.reload();
+        cy.wait(2000);
         cy.get(".category-menu").eq(0).click();
         cy.get(".add-cart").eq(0).click();
         cy.wait(2000);
@@ -49,12 +56,15 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         cy.get(".attr19617").click();
         cy.wait(2000);
+        clickMultipleTimes(".qty-up", 0, 4);
         cy.get(".submit_text").click();
         cy.wait(2000);
         cy.get(".lable").eq(1).click();
         cy.wait(2000);
-        clickMultipleTimes(".cart-qty-up", 0, 4);
+        clickMultipleTimes(".cart-qty-up", 1, 4);
         cy.wait(2000);
-        clickMultipleTimes(".cart-qty-down", 0, 2);
+        clickMultipleTimes(".cart-qty-down", 1, 2);
+        cy.wait(2000);
+        // cy.get(".breadcrumb .fi-rs-home").click();
     });
 });
