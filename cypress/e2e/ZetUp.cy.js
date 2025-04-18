@@ -86,5 +86,8 @@ describe('ZetUpStore', () => {
         clickMultipleTimes(".cart-qty-down", 1, 2);
         cy.wait(2000);
         cy.get(".breadcrumb .fi-rs-home").click();
+        cy.wait(2000);
+        cy.scrollTo('bottom');
+        cy.reload();
     });
 });
