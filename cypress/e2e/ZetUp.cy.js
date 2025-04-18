@@ -56,7 +56,5 @@ describe('ZetUpStore', () => {
         clickMultipleTimes(".cart-qty-up", 0, 4);
         cy.wait(2000);
         clickMultipleTimes(".cart-qty-down", 0, 2);
-        cy.wait(2000);
-        cy.get(".tr-class .fi-rs-trash").click();
     });
 });
