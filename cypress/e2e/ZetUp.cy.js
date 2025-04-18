@@ -88,7 +88,7 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         cy.scrollTo('bottom');
         cy.wait(2000);
-        cyscrollTo('top');
+        cy.scrollTo('top');
         cy.wait(2000);
         cy.reload();
     });
