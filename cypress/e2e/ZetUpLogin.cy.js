@@ -38,8 +38,11 @@ describe('ZetUpLogin', () => {
         cy.wait(2000);
         cy.get(".col-lg-12").find(".col-lg-6").eq(3).find("input").type("singh");
         cy.get(".col-lg-12").find(".col-lg-6").eq(5).find("input").type("98750123");
-        cy.get("#address").type("annexlogics system pvt. ltd");
-        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Rajasthan");
-        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Jaipur");
+        cy.get("#autocomplete").type("Dubai Mall - Dubai - United Arab Emirates")
+        cy.get("#address").type("Downtown Dubai");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Dubai");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Dubai");
+        cy.get(".form-check-label").eq(5).click();
+        cy.get(".btn-text").click();
     });
 });
