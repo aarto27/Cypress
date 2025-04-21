@@ -3,25 +3,25 @@ describe('ZetUpLogin', () => {
         cy.visit("https://hometown.zetupstore.com/");
         cy.wait(2000);
         cy.get(".header-action-icon-2").find("span").contains("Login").click();
-        // cy.wait(2000);
-        // cy.get(".heading_s1").find("a").contains("Register here").click();
-        // cy.get("#name").type("Sanchit");
-        // cy.get("#register-email").type("ssinghnarwat@gmail.com");
-        // cy.get("#register-contact").type("98750123");
-        // cy.get("#register-password").type("Sanchit@123");
-        // cy.get("#register-password-2").type("Sanchit@123");
-        // cy.get("#register-policy-2").click();
-        // cy.get(".mb-30").find("button").contains("Sign Up").click();
-        // cy.get(".header-action-icon-2").find("span").contains("Login").click();
-        // cy.get("#email").type("ssinghnarwat@gmail.com");
-        // cy.get(".passwordvalidation").type("Sanchit@123");
-        // cy.get(".btn-heading").click();
-        // cy.get(".header-action-icon-2").eq(2)
-        //     .find(".cart-dropdown-wrap a")
-        //     .contains("Sign out")
-        //     .click({
-        //         force: true
-        //     });
+        cy.wait(2000);
+        cy.get(".heading_s1").find("a").contains("Register here").click();
+        cy.get("#name").type("Sanchit");
+        cy.get("#register-email").type("ssinghnarwat@gmail.com");
+        cy.get("#register-contact").type("98750123");
+        cy.get("#register-password").type("Sanchit@123");
+        cy.get("#register-password-2").type("Sanchit@123");
+        cy.get("#register-policy-2").click();
+        cy.get(".mb-30").find("button").contains("Sign Up").click();
+        cy.get(".header-action-icon-2").find("span").contains("Login").click();
+        cy.get("#email").type("ssinghnarwat@gmail.com");
+        cy.get(".passwordvalidation").type("Sanchit@123");
+        cy.get(".btn-heading").click();
+        cy.get(".header-action-icon-2").eq(2)
+            .find(".cart-dropdown-wrap a")
+            .contains("Sign out")
+            .click({
+                force: true
+            });
         cy.get("#email").type("ssinghnarwat@gmail.com");
         cy.get(".passwordvalidation").type("Sanchit@123");
         cy.get(".btn-heading").click();
