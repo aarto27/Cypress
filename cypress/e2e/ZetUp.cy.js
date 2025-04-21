@@ -28,6 +28,8 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         cy.get(".attr19617").click();
         cy.wait(2000);
+        cy.get(".wishlist_119225").click();
+        cy.wait(2000);
         cy.get(".submit_text").click();
         cy.wait(2000);
         cy.get(".breadcrumb .fi-rs-home").click();
@@ -49,6 +51,7 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         cy.get(".attr19617").click();
         cy.wait(2000);
+        cy.get(".wishlist_119254").click();
         cy.get(".submit_text").click();
         cy.wait(2000);
         cy.get(".lable").eq(1).click();
@@ -75,6 +78,7 @@ describe('ZetUpStore', () => {
         cy.get(".attr19617").click();
         cy.wait(2000);
         clickMultipleTimes(".qty-up", 0, 4);
+        cy.get(".wishlist_119246").click();
         cy.get(".submit_text").click();
         cy.wait(2000);
         cy.get(".lable").eq(1).click();
@@ -84,6 +88,12 @@ describe('ZetUpStore', () => {
         clickMultipleTimes(".cart-qty-down", 1, 2);
         cy.wait(2000);
         cy.get(".text-center .btn-remove").eq(1).click();
+        // cy.get(".lable").eq(0).click();
+        // cy.wait(2000);
+        // cy.get(".btn-remove").eq(4).click();
+        // cy.wait(2000);
+        // cy.get(".btn-remove").eq(5).click();
+        // cy.wait(2000);
         cy.get(".breadcrumb .fi-rs-home").click();
         cy.wait(2000);
         cy.scrollTo('bottom');
