@@ -88,8 +88,8 @@ describe('ZetUpStore', () => {
         clickMultipleTimes(".cart-qty-down", 1, 2);
         cy.wait(2000);
         cy.get(".text-center .btn-remove").eq(1).click();
-        // cy.get(".lable").eq(0).click();
-        // cy.wait(2000);
+        cy.get(".header-action-2").eq(0).contains("Wishlist").click();
+        cy.wait(2000);
         // cy.get(".btn-remove").eq(4).click();
         // cy.wait(2000);
         // cy.get(".btn-remove").eq(5).click();
