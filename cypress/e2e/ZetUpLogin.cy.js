@@ -36,6 +36,10 @@ describe('ZetUpLogin', () => {
         cy.wait(2000);
         cy.get(".w-100").contains("Proceed To CheckOut").click();
         cy.wait(2000);
-        cy.get(".col-lg-12").find("col-lg-6").eq(3).type("singh")
+        cy.get(".col-lg-12").find(".col-lg-6").eq(3).find("input").type("singh");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(5).find("input").type("98750123");
+        cy.get("#address").type("annexlogics system pvt. ltd");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Rajasthan");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Jaipur");
     });
 });
