@@ -14,7 +14,7 @@ describe('ZetUpLogin', () => {
         cy.get(".mb-30").find("button").contains("Sign Up").click();
         cy.get(".header-action-icon-2").find("span").contains("Login").click();
         cy.get("#email").type("ssinghnarwat@gmail.com");
-        cy.get(".passwordvalidation").type("Sanchit@123");
+        cy.get(".passwordvalidation").type("Sanchit#123");
         cy.get(".btn-heading").click();
         cy.get(".header-action-icon-2").eq(2)
             .find(".cart-dropdown-wrap a")
@@ -23,7 +23,7 @@ describe('ZetUpLogin', () => {
                 force: true
             });
         cy.get("#email").type("ssinghnarwat@gmail.com");
-        cy.get(".passwordvalidation").type("Sanchit@123");
+        cy.get(".passwordvalidation").type("Sanchit#123");
         cy.get(".form-check-label").click();
         cy.get(".btn-heading").click();
         cy.get(".category-menu").eq(0).click();
