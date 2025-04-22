@@ -1,4 +1,6 @@
-import { clickMultipleTimes} from '../support/utils';
+import {
+    clickMultipleTimes
+} from '../support/utils';
 
 describe('ZetUpStore', () => {
     it('ZetUpStore', () => {

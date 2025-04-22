@@ -26,11 +26,11 @@ describe('login', () => {
           });
         }
       });
-      cy.get(".cart-dropdown-wrap").invoke("css", "display", "block");
+    cy.get(".cart-dropdown-wrap").invoke("css", "display", "block");
 
-cy.get(".cart-dropdown-wrap a")
-  .contains("Sign out")
-  .click();
+    cy.get(".cart-dropdown-wrap a")
+      .contains("Sign out")
+      .click();
 
   });
 })

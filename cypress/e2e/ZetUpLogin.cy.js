@@ -58,9 +58,9 @@ describe('ZetUpLogin', () => {
             .click({
                 force: true
             });
-           cy.get(".nav-link").eq(3).should("contain", "Logout").click();
-           cy.get(".breadcrumb .fi-rs-home").click();
-           cy.get(".category-menu").eq(0).click();
+        cy.get(".nav-link").eq(3).should("contain", "Logout").click();
+        cy.get(".breadcrumb .fi-rs-home").click();
+        cy.get(".category-menu").eq(0).click();
         cy.get(".add-cart").eq(0).click();
         cy.wait(2000);
         cy.get(".attr19611").click();
