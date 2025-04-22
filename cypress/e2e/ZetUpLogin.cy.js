@@ -24,6 +24,7 @@ describe('ZetUpLogin', () => {
             });
         cy.get("#email").type("ssinghnarwat@gmail.com");
         cy.get(".passwordvalidation").type("Sanchit@123");
+        cy.get(".form-check-label").click();
         cy.get(".btn-heading").click();
         cy.get(".category-menu").eq(0).click();
         cy.get(".add-cart").eq(0).click();
@@ -40,15 +41,23 @@ describe('ZetUpLogin', () => {
         cy.get(".col-lg-12").find(".col-lg-6").eq(5).find("input").type("98750123");
         cy.get("#autocomplete")
             .click()
-            .type("Dubai Mall - Dubai - United Arab Emirates")
+            .type("PVR, Mall of Jaipur, Gandhi Path West, B Block, Vaishali Nagar, Jaipur, Rajasthan, India")
             .wait(1000)
             .focused()
             .type("{downarrow}")
             .type("{enter}");
-        cy.get("#address").type("Downtown Dubai");
-        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Dubai");
-        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Dubai");
+        cy.get("#address").type("Gandhi Path West B Block Vaishali Nagar");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Jaipur Division");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Rajasthan");
+        cy.get("#ship_country").should("contain", "India");
         cy.get(".form-check-label").eq(5).click();
         cy.get(".btn-text").click();
+        cy.get(".header-action-icon-2").eq(2)
+            .find(".cart-dropdown-wrap a")
+            .contains("Orders")
+            .click({
+                force: true
+            });
+           cy.get(".nav-link").eq(3).should("contain", "Logout").click();
     });
 });
