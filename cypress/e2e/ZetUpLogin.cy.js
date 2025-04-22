@@ -59,5 +59,40 @@ describe('ZetUpLogin', () => {
                 force: true
             });
            cy.get(".nav-link").eq(3).should("contain", "Logout").click();
+           cy.get(".breadcrumb .fi-rs-home").click();
+           cy.get(".category-menu").eq(0).click();
+        cy.get(".add-cart").eq(0).click();
+        cy.wait(2000);
+        cy.get(".attr19611").click();
+        cy.get(".wishlist_119254").click();
+        cy.get(".submit_text").click();
+        cy.wait(2000);
+        cy.get(".lable").eq(1).click();
+        cy.wait(2000);
+        cy.get(".w-100").contains("Proceed To CheckOut").click();
+        cy.wait(2000);
+        cy.get(".col-lg-12").find(".col-lg-6").eq(2).find("input").type("Sanchit");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(3).find("input").type("singh");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(4).find("input").type("singh@gmail.com");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(5).find("input").type("98750123");
+        cy.get("#autocomplete")
+            .click()
+            .type("PVR, Mall of Jaipur, Gandhi Path West, B Block, Vaishali Nagar, Jaipur, Rajasthan, India")
+            .wait(1000)
+            .focused()
+            .type("{downarrow}")
+            .type("{enter}");
+        cy.get("#address").type("Gandhi Path West B Block Vaishali Nagar");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Jaipur Division");
+        cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Rajasthan");
+        cy.get("#ship_country").should("contain", "India");
+        cy.get(".form-check-label").eq(5).click();
+        cy.get(".btn-text").click();
+        cy.get(".header-action-icon-2").eq(2)
+            .find(".cart-dropdown-wrap a")
+            .contains("Orders")
+            .click({
+                force: true
+            });
     });
 });
