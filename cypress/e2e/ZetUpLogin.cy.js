@@ -38,7 +38,7 @@ describe('ZetUpLogin', () => {
         cy.wait(2000);
         cy.get(".col-lg-12").find(".col-lg-6").eq(3).find("input").type("singh");
         cy.get(".col-lg-12").find(".col-lg-6").eq(5).find("input").type("98750123");
-        cy.get("#autocomplete").type("Dubai Mall - Dubai - United Arab Emirates")
+        cy.get("#autocomplete").type("Dubai Mall - Dubai - United Arab Emirates").type(`{downarrow}`).type(`{enter}`);
         cy.get("#address").type("Downtown Dubai");
         cy.get(".col-lg-12").find(".col-lg-6").eq(6).find("input").type("Dubai");
         cy.get(".col-lg-12").find(".col-lg-6").eq(7).find("input").type("Dubai");
