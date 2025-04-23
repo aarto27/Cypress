@@ -19,9 +19,7 @@ describe('ZetUpStore', () => {
         cy.get(".add-cart").click();
         cy.wait(2000);
         cy.get(".attr19612").click();
-        cy.wait(2000);
         cy.get(".attr19613").click();
-        cy.wait(2000);
         cy.get(".wishlist_119225").click();
         cy.wait(2000);
         cy.get(".submit_text").click();
@@ -32,13 +30,9 @@ describe('ZetUpStore', () => {
         cy.get(".add-cart").eq(0).click();
         cy.wait(2000);
         cy.get(".attr19611").click();
-        cy.wait(2000);
         cy.get(".attr19612").click();
-        cy.wait(2000);
         cy.get(".attr19613").click();
-        cy.wait(2000);
         cy.get(".attr19614").click();
-        cy.wait(2000);
         cy.get(".wishlist_119254").click();
         cy.get(".submit_text").click();
         cy.wait(2000);
@@ -52,11 +46,8 @@ describe('ZetUpStore', () => {
         cy.get(".add-cart").eq(3).click();
         cy.wait(2000);
         cy.get(".attr19611").click();
-        cy.wait(2000);
         cy.get(".attr19612").click();
-        cy.wait(2000);
         cy.get(".attr19613").click();
-        cy.wait(2000);
         clickMultipleTimes(".qty-up", 0, 4);
         cy.get(".wishlist_119246").click();
         cy.get(".submit_text").click();
@@ -70,13 +61,11 @@ describe('ZetUpStore', () => {
         cy.get(".text-center .btn-remove").eq(1).click();
         cy.wait(2000);
         cy.get(".breadcrumb .fi-rs-home").click();
+        cy.wait(2000);
+        cy.scrollTo('bottom');
         cy.get(".header-action-icon-2").find("span").contains("Wishlist").click()
         cy.wait(2000);
         cy.get(".btn-remove").find(".fi-rs-trash").eq(0).click();
-        cy.scrollTo('bottom');
-        cy.wait(2000);
-        cy.scrollTo('top');
-        cy.wait(2000);
-        cy.reload();
+        cy.get(".breadcrumb .fi-rs-home").click();
     });
 });
