@@ -38,6 +38,7 @@ describe('ZetUpStore', () => {
         cy.wait(2000);
         cy.get(".lable").eq(1).click();
         cy.wait(2000);
+        cy.get(".detail-extralink-inner").find("input.qty-val").eq(0).clear().type("4{enter}");
         clickMultipleTimes(".cart-qty-up", 0, 4);
         cy.wait(2000);
         clickMultipleTimes(".cart-qty-down", 0, 2);
