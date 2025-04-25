@@ -13,6 +13,11 @@ describe('cart', () => {
         cy.get(".lable").eq(1).click();
         cy.get(".tr-class").find(".btn-remove").eq(0).click();
         cy.get(".tr-class").find(".cart-qty-up").eq(0).click();
-        cy.get(".breadcrumb .mr-5").click();
+        cy.wait(2000);
+        cy.get('.breadcrumb a').contains('Home').click();
+        cy.get(".mini-cart-icon").eq(0).click();
+        cy.get(".btn-remove").find(".fi-rs-trash").eq(0).click();
+        cy.wait(2000);
+        cy.get('.breadcrumb a').contains('Home').click();
     });
 });
