@@ -27,9 +27,10 @@ describe('cart', () => {
             .clear()
             .type("PVR, Mall of Jaipur, Gandhi Path West, B Block, Vaishali Nagar, Jaipur, Rajasthan, India")
             .wait(1000)
-            .focused()
+            // .focused()
             .type("{downarrow}{enter}");
-            cy.wait(2000);
-            cy.get(".confirm-btn").eq(0).click();
+        cy.get(".modal-content ").find(".confirm-btn").click();
+
+
     });
 });
