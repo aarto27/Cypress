@@ -74,6 +74,7 @@ describe('FullTest', () => {
              .find(".cart-dropdown-wrap a")
              .contains("Orders")
              .click({ force: true });
+             cy.get(".table-responsive").find("a").eq(0).click();
  
          // Logout and try guest checkout
          cy.get(".nav-link").eq(3).should("contain", "Logout").click();
